@@ -1,13 +1,16 @@
 var message = {
-  "hello" : "hi"
+  "hello" : "hi",
+  "x" : "y"
 }
 
 function button(){
   var userInput = $("#input").val();
-  $("#chat-area").html(userInput);
+  $("#chat-area").append(userInput + "<br>");
 
   var answer = message[userInput];
-  document.getElementById("chat-area").innerHTML = userInput + ": " + answer; 
+  $("#chat-area").append("person" + ": " + answer + "<br>" + "<br>");
+  //document.getElementById("chat-area").innerHTML = userInput + ": " + answer;
+
 }
 
 /*
