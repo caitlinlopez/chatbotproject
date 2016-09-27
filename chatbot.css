@@ -64,12 +64,12 @@ h4 {
     -webkit-border-radius: 5;
     -moz-border-radius: 5;
     border-radius: 5px;
-    height: 50px;
-    overflow: scroll;
+    height: 65px;
     padding: 2px;
     margin: 0px;
     border: 1px solid #C0C2C5;
     width: 100%;
+    border: transparent;
 }
 
 #input {
@@ -78,7 +78,7 @@ h4 {
   font-family: sans-serif;
   color: #000;
   padding: 5px;
-  margin-right: 3px;
+  margin-right: 10px;
   text-decoration: none;
   font-size: 20px;
   width: 80%;
