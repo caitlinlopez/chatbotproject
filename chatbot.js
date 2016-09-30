@@ -17,11 +17,11 @@ function button(){
 
   if (answer == undefined){
     var fallback = ["what", "???"];
-    //var rand = Math.floor((Math.random() * fallback.length));
+    var rand = fallback[Math.floor((Math.random() * fallback.length))];
 
     $("#chat-area").append(userInput + "<br>");
 
-    $("#chat-area").append("person" + ": " + fallback + "<br>" + "<br>");
+    $("#chat-area").append("person" + ": " + rand + "<br>" + "<br>");
   }
 
   else {
