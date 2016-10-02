@@ -3,7 +3,7 @@ var message = {
   "what time is it?": ["It is " + returnTime() + "."],
   "take a break." : ["I am on my way."],
   "can i buy you drink?" : ["That would be nice."],
-  "hello" : ["a", "b", "c"]
+  "hello" : ["Hi", "Pardon me. Are you Aaron Burr, sir?", "Hey."]
 }
 
 function button(){
@@ -11,7 +11,10 @@ function button(){
   var lowerCase = userInput.toLowerCase();
   var answer = message[lowerCase];
 
-  if (answer == undefined){
+  if (answer === " ") {
+      $("#chat-area").append("Hamilton" + ": " + "hi" + "<br>" + "<br>");
+  }
+  else if (answer == undefined){
     var fallback = ["My dog speaks more eloquently than thee!", "What?", ];
     var rand = fallback[Math.floor((Math.random() * fallback.length))];
 
@@ -19,9 +22,6 @@ function button(){
 
     $("#chat-area").append("Hamilton" + ": " + rand + "<br>" + "<br>");
   }
-else if (answer == " ") {
-    $("#chat-area").append("You" + ": " + "suck" + "<br>");
-}
   else {
   var rAnswer = answer[Math.floor((Math.random() * answer.length))];
 
