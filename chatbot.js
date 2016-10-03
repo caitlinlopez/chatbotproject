@@ -1,21 +1,33 @@
 var message = {
   "what's your name?" : ["Alexander Hamilton. My name is Alexander Hamilton, and there's a million things I haven't done, but just you wait, just you wait."],
-  "what time is it?": ["It is " + returnTime() + "."],
+  "what time is it?": ["It is " + returnTime() + ".", "Showtime! " + "(It's " + returnTime() + ".)"],
   "take a break." : ["I am on my way."],
   "can i buy you drink?" : ["That would be nice."],
-  "hello" : ["Hi", "Pardon me. Are you Aaron Burr, sir?", "Hey."]
+  "where's your family from?" : ["Unimportant. There's a million things I haven't done, but just you wait, just you wait."],
+  "who is your wife?" : ["Elizabeth Schuyler Hamilton", "Eliza Schuyler Hamilton"],
+  "who is maria reynolds?" : ["lol idk"],
+  "how are you?" : ["Not satisfied."],
+  "hello" : ["Hi", "Hey."]
+}
+
+var hamilton = {
+  "" : ["Pardon me. Are you Aaron Burr, sir?",
+        ""]
 }
 
 function button(){
   var userInput = $("#input").val();
   var lowerCase = userInput.toLowerCase();
   var answer = message[lowerCase];
+  var question = hamilton[lowerCase];
 
-  if (answer === " ") {
-      $("#chat-area").append("Hamilton" + ": " + "hi" + "<br>" + "<br>");
+  if (question) {
+    var randomAnswer = question[Math.floor((Math.random() * question.length))];
+
+    $("#chat-area").append("Hamilton" + ": " + randomAnswer + "<br>" + "<br>");
   }
   else if (answer == undefined){
-    var fallback = ["My dog speaks more eloquently than thee!", "What?", ];
+    var fallback = ["My dog speaks more eloquently than thee!", "What?", "I will never understand you."];
     var rand = fallback[Math.floor((Math.random() * fallback.length))];
 
     $("#chat-area").append("You" + ": " + userInput + "<br>");

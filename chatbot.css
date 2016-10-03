@@ -19,7 +19,7 @@ h4 {
     color: white;
     font-size: 14px;
     font-weight: bold;
-    background-color: transparent;
+    background-color: black;
     padding: 5px;
     text-decoration: none;
     width: 18%;
@@ -28,7 +28,7 @@ h4 {
 }
 
 .btn-talk:hover {
-    background: black;
+    background: transparent;
     text-decoration: none;
     font-weight: bold;
 }
