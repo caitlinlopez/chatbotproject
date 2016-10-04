@@ -1,13 +1,13 @@
 var message = {
-  "what's your name?" : ["Alexander Hamilton. My name is Alexander Hamilton, and there's a million things I haven't done, but just you wait, just you wait."],
-  "what time is it?" : ["It is " + returnTime() + ".", "Showtime! " + "(It's " + returnTime() + ".)"],
-  "what's the date?" : ["It's " + returnDate() + "."],
-  "take a break." : ["I am on my way."],
-  "can i buy you drink?" : ["That would be nice."],
-  "where's your family from?" : ["Unimportant. There's a million things I haven't done, but just you wait, just you wait."],
-  "who is your wife?" : ["Elizabeth Schuyler Hamilton", "Eliza Schuyler Hamilton"],
-  "who is maria reynolds?" : ["lol idk"],
-  "how are you?" : ["Not satisfied."],
+  "whats your name" : ["Alexander Hamilton. My name is Alexander Hamilton, and there's a million things I haven't done, but just you wait, just you wait."],
+  "what time is it" : ["It is " + returnTime() + ".", "Showtime! " + "(It's " + returnTime() + ".)"],
+  "whats the date" : ["It's " + returnDate() + "."],
+  "take a break" : ["I am on my way."],
+  "can i buy you drink" : ["That would be nice."],
+  "wheres your family from" : ["Unimportant. There's a million things I haven't done, but just you wait, just you wait."],
+  "who is your wife" : ["Elizabeth Schuyler Hamilton", "Eliza Schuyler Hamilton"],
+  "who is maria reynolds" : ["lol idk"],
+  "how are you" : ["Not satisfied."],
   "hello" : ["Hi", "Hey."]
 }
 
@@ -17,7 +17,7 @@ var hamilton = {
 
 function button(){
   var userInput = $("#input").val();
-  var lowerCase = userInput.toLowerCase();
+  var lowerCase = userInput.toLowerCase().replace(/[^a-zA-Z ]+/g, '').replace('/ {2,}/',' ');
   var answer = message[lowerCase];
   var question = hamilton[lowerCase];
 
@@ -90,28 +90,3 @@ function returnDate(){
 
   return month + " " + date + ", " + year;
 }
-
-/*
-if(userInput.indexOf("x") > -1){
-  answer = cchdhbcds;
-}
-
-
-  var x = {
-    "z" : "c",
-  }
-
-  var r = x["z" or userInput]; --> c
-
-  var userInput = "hello";
-
-  if (answer == undefined){
-    $("#chat-area").append(userInput + "<br>");
-
-    var answerr = "what";
-    $("#chat-area").append("person" + ": " + answer + "<br>" + "<br>");
-  }
-
-  input = input.toLowerCase()
-
-*/
