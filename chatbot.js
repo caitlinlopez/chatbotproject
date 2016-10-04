@@ -1,6 +1,7 @@
 var message = {
   "what's your name?" : ["Alexander Hamilton. My name is Alexander Hamilton, and there's a million things I haven't done, but just you wait, just you wait."],
   "what time is it?": ["It is " + returnTime() + ".", "Showtime! " + "(It's " + returnTime() + ".)"],
+  "" : [""],
   "take a break." : ["I am on my way."],
   "can i buy you drink?" : ["That would be nice."],
   "where's your family from?" : ["Unimportant. There's a million things I haven't done, but just you wait, just you wait."],
@@ -11,8 +12,7 @@ var message = {
 }
 
 var hamilton = {
-  "" : ["Pardon me. Are you Aaron Burr, sir?",
-        ""]
+  "" : ["Pardon me. Are you Aaron Burr, sir?"]
 }
 
 function button(){
@@ -25,6 +25,12 @@ function button(){
     var randomAnswer = question[Math.floor((Math.random() * question.length))];
 
     $("#chat-area").append("Hamilton" + ": " + randomAnswer + "<br>" + "<br>");
+  }
+  else if(lowerCase.indexOf("lafayette") > -1){
+    answer = "I’M TAKIN THIS HORSE BY THE REINS MAKIN’ REDCOATS REDDER WITH BLOODSTAINS";
+
+    $("#chat-area").append("You" + ": " + userInput + "<br>");
+    $("#chat-area").append("Hamilton" + ": " + answer + "<br>" + "<br>");
   }
   else if (answer == undefined){
     var fallback = ["My dog speaks more eloquently than thee!", "What?", "I will never understand you."];
@@ -66,6 +72,11 @@ function enter(event){
 
 
 /*
+if(userInput.indexOf("x") > -1){
+  answer = cchdhbcds;
+}
+
+
   var x = {
     "z" : "c",
   }
