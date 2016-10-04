@@ -1,7 +1,7 @@
 var message = {
   "what's your name?" : ["Alexander Hamilton. My name is Alexander Hamilton, and there's a million things I haven't done, but just you wait, just you wait."],
-  "what time is it?": ["It is " + returnTime() + ".", "Showtime! " + "(It's " + returnTime() + ".)"],
-  "" : [""],
+  "what time is it?" : ["It is " + returnTime() + ".", "Showtime! " + "(It's " + returnTime() + ".)"],
+  "what's the date?" : ["It's " + returnDate() + "."],
   "take a break." : ["I am on my way."],
   "can i buy you drink?" : ["That would be nice."],
   "where's your family from?" : ["Unimportant. There's a million things I haven't done, but just you wait, just you wait."],
@@ -69,7 +69,27 @@ function enter(event){
   }
 }
 
+function returnDate(){
+  var now = new Date(Date.now());
+  var m = new Array();
+  m[0] = "January";
+  m[1] = "February";
+  m[2] = "March";
+  m[3] = "April";
+  m[4] = "May";
+  m[5] = "June";
+  m[6] = "July";
+  m[7] = "August";
+  m[8] = "September";
+  m[9] = "October";
+  m[10] = "November";
+  m[11] = "December";
+  var month = m[now.getMonth()];
+  var date = now.getDate();
+  var year = now.getFullYear();
 
+  return month + " " + date + ", " + year;
+}
 
 /*
 if(userInput.indexOf("x") > -1){
